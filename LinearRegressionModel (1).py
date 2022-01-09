@@ -3,7 +3,6 @@
 
 # In[14]:
 
-
 from sklearn.datasets import load_diabetes
 diabetesdata = load_diabetes()
 import numpy as np
@@ -44,7 +43,6 @@ from sklearn.metrics import mean_squared_error
 mean_squared_error(Y_sTest, predictions) #The error amount we got here with scaled data was .48 with a range of 3.5 within the 
 #labels
 
-
 # In[42]:
 
 
@@ -67,7 +65,9 @@ mean_squared_error(Y_test, vals)
 
 
 # In[ ]:
-
+#We can also arrive to the same solution by taking the gradient of the mean squared error cost function with respect to the weight and setting it equal to 0.
+#Doing so we get 2x(y-xW) = 0 => xy-x^TxW = 0 => x^TxW = xy => W=(X^TX)^-1x^Ty. If we perform this operation to the left using numpys linear algebra we get the
+#exact result as if we simply use 'Linear Regressions module from scikit learn'.
 
 
 
